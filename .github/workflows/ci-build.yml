@@ -51,6 +51,6 @@ jobs:
 
       - name: Deploy con Helm
         run: |
-          helm upgrade --install online-boutique ./helm-chart `
-            --set images.repository=${{ secrets.DOCKERHUB_USERNAME }} `
-            --set images.tag=latest
+          helm upgrade --install online-boutique-custom ./helm-chart-custom `
+            --set imageRepository=${{ secrets.DOCKERHUB_USERNAME }} `
+            --set imageTag=latest
